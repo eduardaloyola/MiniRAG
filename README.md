@@ -38,32 +38,6 @@ flowchart LR
 
 Os textos foram escritos com palavras próprias a partir de legislação e portais oficiais. **Última revisão: setembro de 2026.**
 
-Para atualizar: edite os arquivos em `docs/` (mantendo o formato `## Pergunta?`) e faça um novo deploy. Mudou o salário mínimo? Ajuste os valores do MEI e do Juizado.
-
-## Segurança e limites
-
-- A chave da API vive em `st.secrets` (hospedagem) ou `.env` (local); **nunca** é commitada.
-- Usuários **não enviam documentos**: a base é fixa, o que reduz abuso.
-- Limites: 300 caracteres por pergunta, 10 perguntas por visita e 300 por dia no total, para respeitar a cota gratuita.
-- A *system instruction* proíbe inventar valores, exige citar fonte, evita aconselhamento personalizado e manda ignorar tentativas de mudar as regras (mitigação básica de *prompt injection*).
-
-## Rodar localmente
-
-```bash
-git clone <seu-repo> && cd mini-rag-gemini
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cp .streamlit/secrets.toml.example .streamlit/secrets.toml   # cole sua chave (https://aistudio.google.com/apikey)
-python -m streamlit run app.py
-```
-
-## Publicar (Streamlit Community Cloud, gratuito)
-
-1. Suba o repositório (público) no GitHub, sem `.env` nem `secrets.toml`.
-2. Em https://share.streamlit.io, faça login com o GitHub e clique em **Create app**.
-3. Escolha o repositório, a branch `main` e o arquivo `app.py`.
-4. Em **Advanced settings > Secrets**, cole: `GEMINI_API_KEY = "sua_chave"`.
-5. **Deploy** e copie o link para este README.
 
 ## Limitações e próximos passos
 
