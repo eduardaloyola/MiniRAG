@@ -2,8 +2,7 @@
 
 Assistente web que responde dúvidas sobre **MEI, direitos do consumidor e documentos básicos** no Brasil, usando **RAG** (Retrieval-Augmented Generation) com a API gratuita do Google Gemini. Projeto de estudo para demonstrar **embeddings**, **busca semântica** e **prompt engineering** aplicados a um caso real.
 
-🔗 **Demo online:** _cole aqui o link do seu app_
-
+🔗 **Demo online:** https://guia-cidadao.streamlit.app/
 > ⚠️ **Aviso:** o app oferece informação geral e educativa. Não substitui advogado, contador ou órgãos oficiais. Valores e prazos mudam com o tempo.
 
 Quem visita **não precisa de chave de API**: ela fica guardada como *secret* no servidor.
